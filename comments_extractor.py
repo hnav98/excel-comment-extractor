@@ -16,7 +16,7 @@ def extract_notes(sheet, file_name, sheet_name):
     return notes
 
 # Directory containing Excel files
-folder_path = r'C:\Users\hnav9\Desktop\import templates'
+folder_path = r'C:\Users\user1\Desktop\excel files'
 
 # List to store all notes
 all_notes = []
@@ -45,7 +45,7 @@ for file_name in os.listdir(folder_path):
 notes_df = pd.DataFrame(all_notes, columns=['File Name', 'Sheet Name', 'Cell Coordinate', 'Note'])
 
 # Specify the location to save the CSV file
-csv_file_path = r'C:\Users\hnav9\Desktop\extracted_notes.csv'  # Change this path to your desired location
+csv_file_path = r'C:\Users\user1\Desktop\extracted_notes.csv'  # Change this path to your desired location
 
 # Export DataFrame to CSV
 notes_df.to_csv(csv_file_path, index=False)
